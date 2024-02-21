@@ -56,7 +56,7 @@ plot(s)
 ```{r}
 imgurl <- system.file("figures/cat.png", package="hexSticker")
 c <- sticker(imgurl, package="catSticker", p_size=20, s_x=1, s_y=.75, s_width=.6,
-        filename="inst/figures/imgfile.png")
+        filename="inst/figures/catImgfile.png")
 print(c)
 ```
 
@@ -66,10 +66,23 @@ print(c)
 # Used https://redketchup.io/color-picker to pick colors
 # Databrary logos are here https://github.com/databrary/databrary/tree/play-end/public/images/logo
 imgurl <- "img/databrary-large.png"
-c <- sticker(imgurl, package="databraryR", p_size=18, p_color = "#F78D56", 
+c <- sticker(imgurl, package="databraryR", p_size=15, p_color = "#F78D56", 
              s_x=1, s_y=.75, s_width=.6,
              h_fill = "white", h_color="#5DB8C3",
         filename="inst/figures/databraryR-hex.png")
+print(c)
+```
+
+## datavyur 
+
+```{r}
+# Datavyu logo is here https://github.com/databrary/www/blob/dev/common/theme/static/img/logo/datavyu-large.png
+
+imgurl <- "img/datavyu-large.png"
+c <- sticker(imgurl, package="datavyuR", p_size=15, p_color = "black", 
+             s_x=1, s_y=.75, s_width=.6,
+             h_fill = "white", h_color="#F7DC29",
+        filename="inst/figures/datavyur-hex.png")
 print(c)
 ```
 
@@ -95,10 +108,17 @@ openai::create_image("open transparent reproducible science")
 - Incorporate using `hexSticker`
 
 ```{r}
-img <- "openai-img/open-transparent-reproducible-science.png"
-c <- sticker(img, package="Open Science\nBootcamp 2023", p_size=10, s_x=1, s_y=.7, s_width=.4, s_height=.4, filename ="inst/figures/bootcamp.png")
+img <- "img/open-transparent-reproducible-science.png"
+c <- sticker(img, package="Open Science\nBootcamp 2023", p_x = 1, p_y = 1, p_size=16, p_color = "coral4", s_x=1, s_y=1, s_width=1, s_height=1, filename ="inst/figures/bootcamp.png", h_color="darkcyan")
 print(c)
 ```
 
+Experimenting with different parameters.
+
+```{r}
+img <- "img/open-transparent-reproducible-science.png"
+c <- sticker(img, package="Open Science\nBootcamp 2023", p_size=10, s_x=1, s_y=.7, s_width=.4, s_height=.4, filename ="inst/figures/bootcamp.png")
+print(c)
+```
 
 
